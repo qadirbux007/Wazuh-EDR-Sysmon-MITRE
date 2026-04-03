@@ -1,10 +1,8 @@
 # 🔍 Wazuh EDR with Sysmon & MITRE ATT&CK Threat Detection
 
-![Wazuh](https://img.shields.io/badge/Wazuh-EDR-blue?style=for-the-badge)
-![Sysmon](https://img.shields.io/badge/Sysmon-v15.20-darkblue?style=for-the-badge)
-![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-red?style=for-the-badge)
-![Windows](https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Dashboard](screenshots/MITRE.png)
+![Dashboard](screenshots/custoom_rules.png)
+![Dashboard](screenshots/alerts.png)
 
 ---
 
@@ -154,16 +152,13 @@ schtasks /query /fo LIST
 ## 📸 Screenshots
 
 ### MITRE ATT&CK Dashboard
-![MITRE](screenshots/mitre-attack-dashboard.png)
+![Dashboard](screenshots/MITRE.png)
 
 ### Custom Rules Firing
-![Rules](screenshots/custom-rules-alerts.png)
-
-### Sysmon Events in Dashboard
-![Sysmon](screenshots/sysmon-events.png)
+![Dashboard](screenshots/custoom_rules.png)
 
 ### Alert Detail View
-![Alert](screenshots/alert-detail.png)
+![Dashboard](screenshots/alerts.png)
 
 ---
 
