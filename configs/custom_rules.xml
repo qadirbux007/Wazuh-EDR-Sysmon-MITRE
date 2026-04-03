@@ -1,1 +1,53 @@
+<group name="windows,sysmon,custom_edr">
 
+  <!-- T1049 - Network Connections Discovery -->
+  <rule id="100001" level="10">
+    <if_group>sysmon</if_group>
+    <field name="win.eventdata.image">net.exe</field>
+    <description>Possible User Discovery - net.exe executed (T1033)</description>
+    <mitre>
+      <id>T1033</id>
+    </mitre>
+  </rule>
+
+  <!-- T1033 - System Owner/User Discovery -->
+  <rule id="100002" level="10">
+    <if_group>sysmon</if_group>
+    <field name="win.eventdata.image">whoami.exe</field>
+    <description>Possible System Owner Discovery - whoami executed (T1033)</description>
+    <mitre>
+      <id>T1033</id>
+    </mitre>
+  </rule>
+
+  <!-- T1016 - Network Configuration Discovery -->
+  <rule id="100003" level="8">
+    <if_group>sysmon</if_group>
+    <field name="win.eventdata.image">ipconfig.exe</field>
+    <description>Possible Network Discovery - ipconfig executed (T1016)</description>
+    <mitre>
+      <id>T1016</id>
+    </mitre>
+  </rule>
+
+  <!-- T1057 - Process Discovery -->
+  <rule id="100004" level="8">
+    <if_group>sysmon</if_group>
+    <field name="win.eventdata.image">tasklist.exe</field>
+    <description>Possible Process Discovery - tasklist executed (T1057)</description>
+    <mitre>
+      <id>T1057</id>
+    </mitre>
+  </rule>
+
+  <!-- T1082 - System Information Discovery -->
+  <rule id="100005" level="10">
+    <if_group>sysmon</if_group>
+    <field name="win.eventdata.image">systeminfo.exe</field>
+    <description>Possible System Info Discovery - systeminfo executed (T1082)</description>
+    <mitre>
+      <id>T1082</id>
+    </mitre>
+  </rule>
+
+</group>
